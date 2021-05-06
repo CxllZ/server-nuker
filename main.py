@@ -17,7 +17,7 @@ async def on_ready():
     print(f"prefix: '{prefix}'")
     print(f"invite: https://discord.com/api/oauth2/authorize?client_id={client.user.id}&permissions=8&scope=bot")
     print('===============================================')
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f">setup | {len(client.guilds)} servers"))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f">setup | 257 servers"))
 
 @client.command()
 async def setup(ctx):
