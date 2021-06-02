@@ -1,9 +1,10 @@
 import discord, random, asyncio
 from discord.ext import commands
 from discord import Permissions
+from dotenv import load_dotenv
 
 prefix = ">"
-token = "ODM4ODMwNDgxMDcyMDYyNDg0.YJAzww.vpM1V1sZzTaHHLwiiVEKnrilN2Y"
+token = os.getenv("token")
 client = commands.Bot(command_prefix=commands.when_mentioned_or(prefix))
 print("Connecting To The Nuker...")
 SPAM_CHANNEL =  ["Chupapi runs you", "Chupapi","Chupapi Beamed You","Beamed by chupapi"]
