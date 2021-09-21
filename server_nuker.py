@@ -72,4 +72,4 @@ async def on_guild_channel_create(channel):
     while True:
       await channel.send(SPAM_MESSAGE)
 
-client.run("ODM4ODMwNDgxMDcyMDYyNDg0.YJAzww.Y4jQFYHfv2IntQ3re8h64U4JqpY", bot=True)
+client.run(ENTER BOT TOKEN, bot=True)
